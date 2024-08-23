@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f; // add speed
-    public float turnSpeed; //We can turn left or right
-    public float horizontalInput;
-    public float forwardInput;
+    //Private Variables
+    private float speed = 5.0f; // add speed
+    private float turnSpeed = 25.0f; //We can turn left or right
+    private float horizontalInput;
+    private float forwardInput;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //This is where we get player input
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
