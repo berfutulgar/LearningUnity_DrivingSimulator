@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
         forwardInput = Input.GetAxis("Vertical");
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput); //We'll move the vehicle forward
-        transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput);
+        //transform.Translate(Vector3.right * Time.deltaTime * turnSpeed * horizontalInput); 
+        //Make vehicle rotate instead of slide:
+        transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput); 
     }
 }
